@@ -551,30 +551,72 @@
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
+  <!-- Gallery (Instagram-fed) -->
+  <section id="gallery" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-4 mb-8">
         <div>
           <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Gallery</h2>
-          <p class="mt-2 text-neutral-600">A peek at our dishes and events.</p>
+          <p class="mt-2 text-neutral-600">Latest from our Instagram.</p>
         </div>
+        <a id="instaLink" href="#" target="_blank" rel="noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M7 10l5 5 5-5" />
+          </svg>
+          Open Instagram
+        </a>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
-          src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
-          alt="Spread 1" />
-        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
-          src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Spread 2" />
-        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
-          src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop"
-          alt="Event buffet" />
-        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
-          src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
-          alt="Seasonings" />
+
+      <!-- Fallback skeletons while loading -->
+      <div id="instaGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- placeholders shown until JS replaces them -->
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+      </div>
+
+      <div id="instaError"
+        class="hidden mt-6 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+        Couldn’t load Instagram right now. Please check back soon.
       </div>
     </div>
   </section>
+
+  <!-- Gallery (Instagram-fed) -->
+  <section id="gallery" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Gallery</h2>
+          <p class="mt-2 text-neutral-600">Latest from our Instagram.</p>
+        </div>
+        <a id="instaLink" href="#" target="_blank" rel="noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M7 10l5 5 5-5" />
+          </svg>
+          Open Instagram
+        </a>
+      </div>
+
+      <!-- Fallback skeletons while loading -->
+      <div id="instaGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- placeholders shown until JS replaces them -->
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+        <div class="rounded-lg border border-teal-200 bg-white h-48 animate-pulse"></div>
+      </div>
+
+      <div id="instaError"
+        class="hidden mt-6 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+        Couldn’t load Instagram right now. Please check back soon.
+      </div>
+    </div>
+  </section>
+
 
   <!-- Location -->
   <section class="py-16 sm:py-20 bg-white border-t border-teal-200/60">
@@ -782,6 +824,54 @@
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   </script>
+  <script>
+    // OPTIONAL: set your IG username for the "Open Instagram" button
+    const IG_USERNAME = "jaydeescatering"; // change to your handle (no @)
+
+    async function loadInstagram() {
+      const grid = document.getElementById('instaGrid');
+      const errorBox = document.getElementById('instaError');
+      const linkBtn = document.getElementById('instaLink');
+      if (IG_USERNAME && linkBtn) {
+        linkBtn.href = `https://instagram.com/${IG_USERNAME}`;
+        linkBtn.classList.remove('hidden');
+      }
+
+      try {
+        // Hit your serverless function (see step 3) to keep tokens server-side
+        const res = await fetch('/api/instagram?limit=8');
+        if (!res.ok) throw new Error('Bad response');
+        const data = await res.json(); // [{permalink, media_url, thumbnail_url, media_type, caption}, ...]
+
+        // Build cards
+        const cards = data.map(item => {
+          const isVideo = item.media_type === 'VIDEO';
+          const src = isVideo ? (item.thumbnail_url || item.media_url) : item.media_url;
+
+          return `
+          <a href="${item.permalink}" target="_blank" rel="noreferrer"
+             class="group block rounded-lg border border-teal-200 overflow-hidden">
+            <img src="${src}" alt="${(item.caption || 'Instagram photo').replace(/"/g, '&quot;')}"
+                 class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy"/>
+            <div class="flex items-center justify-between px-3 py-2 bg-white">
+              <span class="text-xs text-neutral-600 truncate">${item.caption ? item.caption.slice(0, 60) : 'View on Instagram'}</span>
+              ${isVideo ? '<span class="text-[10px] px-2 py-0.5 rounded-full bg-teal-50 text-teal-800 ring-1 ring-teal-200">Video</span>' : ''}
+            </div>
+          </a>
+        `;
+        }).join('');
+
+        grid.innerHTML = cards || '<p class="text-sm text-neutral-600">No posts yet.</p>';
+      } catch (e) {
+        console.error(e);
+        errorBox?.classList.remove('hidden');
+      }
+    }
+
+    loadInstagram();
+  </script>
+
+
 </body>
 
 </html>
