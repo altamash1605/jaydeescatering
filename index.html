@@ -1,689 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jay Dees Catering — A Taste of the Caribbean</title>
-    <meta name="description" content="Jay Dees Catering in North Kensington: authentic Caribbean catering & takeaway. Fast, affordable, and delicious. Order now or request catering for your event." />
-    <!-- Fonts: Display for headings (Caribbean feel) + Inter for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.447.0/dist/umd/lucide.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Tropical gradient helpers */
-      .tropical-gradient {
-        background-image:
-          radial-gradient(1200px 600px at 0% -10%, rgba(34,197,94,0.10) 0%, rgba(34,197,94,0) 50%),
-          radial-gradient(900px 500px at 110% 110%, rgba(249,115,22,0.10) 0%, rgba(249,115,22,0) 50%),
-          linear-gradient(180deg, #f8fafb 0%, #fff 30%);
-      }
-      /* Palm leaf corner motifs (very subtle) */
-      .palm-top:before,
-      .palm-bottom:after {
-        content:"";
-        position:absolute;
-        pointer-events:none;
-        width:520px;
-        height:520px;
-        opacity:.06;
-        background-repeat:no-repeat;
-        background-size:contain;
-        filter:contrast(110%) saturate(110%);
-      }
-      .palm-top:before {
-        top:-120px; left:-120px;
-        background-image:url('data:image/svg+xml;utf8,<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="%230a7f7c" stroke-width="1.5" opacity="0.9"><path d="M20,320 C120,280 220,240 320,320"/><path d="M40,360 C150,300 240,280 340,340"/><path d="M60,400 C180,320 260,320 360,360"/><path d="M80,440 C210,340 280,360 380,380"/></g></svg>');
-      }
-      .palm-bottom:after {
-        bottom:-140px; right:-140px;
-        background-image:url('data:image/svg+xml;utf8,<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="%23f97316" stroke-width="1.5" opacity="0.9"><path d="M620,320 C520,280 420,240 320,320"/><path d="M600,360 C490,300 400,280 300,340"/><path d="M580,400 C460,320 380,320 280,360"/><path d="M560,440 C430,340 360,360 260,380"/></g></svg>');
-      }
-      /* Heading font utility */
-      .font-display { font-family: "Calistoga", ui-serif, Georgia, serif; }
-    </style>
-  </head>
 
-  <body class="min-h-screen antialiased bg-emerald-50/40 text-neutral-800 [font-family:'Inter',system-ui,-apple-system,Segoe_UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue','Noto Sans',Arial,'Apple Color Emoji','Segoe UI Emoji']">
-    <!-- Top Announcement (color updated) -->
-    <div class="w-full bg-teal-700 text-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 text-center text-sm">
-        Free local delivery around Notting Hill Gate on orders over £25 · Open 7 days
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jay Dees Catering — A Taste of the Caribbean</title>
+  <meta name="description"
+    content="Jay Dees Catering in North Kensington: authentic Caribbean catering & takeaway. Fast, affordable, and delicious. Order now or request catering for your event." />
+  <!-- Fonts: Display for headings (Caribbean feel) + Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.447.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tropical gradient helpers */
+    .tropical-gradient {
+      background-image:
+        radial-gradient(1200px 600px at 0% -10%, rgba(34, 197, 94, 0.10) 0%, rgba(34, 197, 94, 0) 50%),
+        radial-gradient(900px 500px at 110% 110%, rgba(249, 115, 22, 0.10) 0%, rgba(249, 115, 22, 0) 50%),
+        linear-gradient(180deg, #f8fafb 0%, #fff 30%);
+    }
+
+    /* Palm leaf corner motifs (very subtle) */
+    .palm-top:before,
+    .palm-bottom:after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      width: 520px;
+      height: 520px;
+      opacity: .06;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: contrast(110%) saturate(110%);
+    }
+
+    .palm-top:before {
+      top: -120px;
+      left: -120px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="%230a7f7c" stroke-width="1.5" opacity="0.9"><path d="M20,320 C120,280 220,240 320,320"/><path d="M40,360 C150,300 240,280 340,340"/><path d="M60,400 C180,320 260,320 360,360"/><path d="M80,440 C210,340 280,360 380,380"/></g></svg>');
+    }
+
+    .palm-bottom:after {
+      bottom: -140px;
+      right: -140px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="%23f97316" stroke-width="1.5" opacity="0.9"><path d="M620,320 C520,280 420,240 320,320"/><path d="M600,360 C490,300 400,280 300,340"/><path d="M580,400 C460,320 380,320 280,360"/><path d="M560,440 C430,340 360,360 260,380"/></g></svg>');
+    }
+
+    /* Heading font utility */
+    .font-display {
+      font-family: "Calistoga", ui-serif, Georgia, serif;
+    }
+  </style>
+</head>
+
+<body
+  class="min-h-screen antialiased bg-emerald-50/40 text-neutral-800 [font-family:'Inter',system-ui,-apple-system,Segoe_UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue','Noto Sans',Arial,'Apple Color Emoji','Segoe UI Emoji']">
+  <!-- Top Announcement (color updated) -->
+  <div class="w-full bg-teal-700 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 text-center text-sm">
+      Free local delivery around Notting Hill Gate on orders over £25 · Open 7 days
+    </div>
+  </div>
+
+  <!-- Navigation (tones + logo chip updated) -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-teal-200/50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="inline-flex items-center gap-3 group" aria-label="Jay Dees Catering Home">
+          <img src="images/logo.png" alt="Jay Dees Catering Logo"
+            class="w-10 h-10 object-contain rounded-md shadow-sm ring-1 ring-black/5" />
+          <div class="flex flex-col leading-none">
+            <span
+              class="text-[15px] font-semibold tracking-tight text-neutral-900 group-hover:text-neutral-700 transition-colors font-display">
+              Jay Dees Catering
+            </span>
+            <span class="text-[11px] text-neutral-500">North Kensington · Est. 2004</span>
+          </div>
+        </a>
+
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#menu" class="text-neutral-700 hover:text-teal-800 transition-colors">Menu</a>
+          <a href="#catering" class="text-neutral-700 hover:text-teal-800 transition-colors">Catering</a>
+          <a href="#about" class="text-neutral-700 hover:text-teal-800 transition-colors">About</a>
+          <a href="#contact" class="text-neutral-700 hover:text-teal-800 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="tel:+442071234567"
+            class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-3.5 py-2 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            Call to Order
+          </a>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm font-medium hover:bg-teal-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            Request Catering
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="menuButton"
+          class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-teal-900 hover:text-teal-800 hover:bg-teal-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500"
+          aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileNav" class="md:hidden hidden pb-4">
+        <div class="mt-2 grid gap-1 text-sm">
+          <a href="#menu" class="rounded-md px-3 py-2 hover:bg-teal-50">Menu</a>
+          <a href="#catering" class="rounded-md px-3 py-2 hover:bg-teal-50">Catering</a>
+          <a href="#about" class="rounded-md px-3 py-2 hover:bg-teal-50">About</a>
+          <a href="#contact" class="rounded-md px-3 py-2 hover:bg-teal-50">Contact</a>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="tel:+442071234567"
+              class="inline-flex items-center justify-center gap-2 rounded-md border border-teal-200 bg-white px-3 py-2 hover:bg-teal-50">
+              <i data-lucide="phone" class="w-4 h-4"></i> Call
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center justify-center gap-2 rounded-md bg-teal-600 text-white px-3 py-2 hover:bg-teal-700">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Catering
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+  </header>
 
-    <!-- Navigation (tones + logo chip updated) -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-teal-200/50">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <!-- Logo -->
-<a href="#" class="inline-flex items-center gap-3 group" aria-label="Jay Dees Catering Home">
-  <img 
-    src="/images/logo.png" 
-    alt="Jay Dees Catering Logo" 
-    class="w-10 h-10 object-contain rounded-md shadow-sm ring-1 ring-black/5"
-  />
-  <div class="flex flex-col leading-none">
-    <span class="text-[15px] font-semibold tracking-tight text-neutral-900 group-hover:text-neutral-700 transition-colors font-display">
-      Jay Dees Catering
-    </span>
-    <span class="text-[11px] text-neutral-500">North Kensington · Est. 2004</span>
-  </div>
-</a>
-
-
-          <!-- Desktop Nav -->
-          <nav class="hidden md:flex items-center gap-8 text-sm">
-            <a href="#menu" class="text-neutral-700 hover:text-teal-800 transition-colors">Menu</a>
-            <a href="#catering" class="text-neutral-700 hover:text-teal-800 transition-colors">Catering</a>
-            <a href="#about" class="text-neutral-700 hover:text-teal-800 transition-colors">About</a>
-            <a href="#contact" class="text-neutral-700 hover:text-teal-800 transition-colors">Contact</a>
-          </nav>
-
-          <!-- Actions -->
-          <div class="hidden md:flex items-center gap-3">
-            <a href="tel:+442071234567" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-3.5 py-2 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-              <i data-lucide="phone" class="w-4 h-4"></i>
+  <!-- Hero (tropical gradient + badge tones) -->
+  <section class="relative overflow-hidden tropical-gradient palm-top palm-bottom">
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
+        <div class="space-y-6">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-[12px] text-teal-800 shadow-sm">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-700"></i>
+            North Kensington · Notting Hill Gate Delivery
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 font-display">
+            A taste of the Caribbean in the comfort of your home
+          </h1>
+          <p class="text-base sm:text-lg leading-relaxed text-neutral-700">
+            For over 20 years, Jay Dees Catering has served authentic Caribbean flavors with fast turnaround and fair
+            pricing. From birthdays to family gatherings, our chefs craft vibrant Jamaican dishes and deliver right to
+            your door.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href="#menu"
+              class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-5 py-3 text-sm font-medium hover:bg-teal-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+              <i data-lucide="utensils" class="w-5 h-5"></i>
+              View Menu
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-5 py-3 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+              <i data-lucide="chef-hat" class="w-5 h-5"></i>
+              Book Catering
+            </a>
+            <a href="tel:+442071234567"
+              class="inline-flex items-center gap-2 rounded-md border border-lime-200 bg-lime-50 text-teal-900 px-5 py-3 text-sm hover:bg-lime-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+              <i data-lucide="phone" class="w-5 h-5"></i>
               Call to Order
             </a>
-            <a href="#contact" class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm font-medium hover:bg-teal-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-              <i data-lucide="calendar" class="w-4 h-4"></i>
-              Request Catering
+          </div>
+          <div class="flex items-center gap-6 pt-2">
+            <div class="flex -space-x-2">
+              <img src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=200&auto=format&fit=crop"
+                alt="Customer 1" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+                alt="Customer 2" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
+              <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=200&auto=format&fit=crop"
+                alt="Customer 3" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
+            </div>
+            <p class="text-sm text-neutral-600">
+              Trusted locally for 8+ years of first-class service
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-xl border border-teal-200 bg-white shadow-sm overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop"
+              alt="Caribbean feast" class="w-full h-72 sm:h-96 object-cover" />
+            <div class="grid grid-cols-3 gap-2 p-2 bg-white">
+              <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Jerk chicken"
+                class="h-24 w-full object-cover rounded-md" />
+              <img src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Curry goat"
+                class="h-24 w-full object-cover rounded-md" />
+              <img src="https://images.unsplash.com/photo-1635151227785-429f420c6b9d?w=1080&q=80" alt="Plantain"
+                class="h-24 w-full object-cover rounded-md" />
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-6 -left-6 bg-white border border-teal-200 rounded-xl shadow-sm px-4 py-3 hidden sm:flex items-center gap-3">
+            <i data-lucide="bike" class="w-5 h-5 text-teal-700"></i>
+            <div>
+              <p class="text-sm font-medium text-neutral-900">Fast Delivery</p>
+              <p class="text-xs text-neutral-600">Notting Hill Gate area</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About (colors updated + display headings) -->
+  <section id="about" class="py-16 sm:py-20 border-t border-teal-200/60 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div class="space-y-4">
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Jay Dees Catering
+            in North Kensington</h2>
+          <p class="text-neutral-700 leading-relaxed">
+            We specialise in Caribbean food and have been in the catering business for over 20 years. We offer our
+            cuisine and catering services for any special occasion, be it a birthday, anniversary, family gathering or
+            anything in between.
+          </p>
+          <p class="text-neutral-700 leading-relaxed">
+            Our takeaway based in Notting Hill Gate delivers a wide variety of authentic Caribbean and English food.
+            Contact us now for more information.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4 pt-2">
+            <div class="rounded-lg border border-teal-200 bg-white p-4">
+              <div class="flex items-center gap-2 text-neutral-900">
+                <i data-lucide="award" class="w-4.5 h-4.5 text-teal-700"></i>
+                <span class="text-sm font-medium">20+ Years</span>
+              </div>
+              <p class="text-xs text-neutral-600 mt-1">Catering excellence</p>
+            </div>
+            <div class="rounded-lg border border-teal-200 bg-white p-4">
+              <div class="flex items-center gap-2 text-neutral-900">
+                <i data-lucide="flame" class="w-4.5 h-4.5 text-orange-600"></i>
+                <span class="text-sm font-medium">Authentic</span>
+              </div>
+              <p class="text-xs text-neutral-600 mt-1">Jamaican flavours</p>
+            </div>
+            <div class="rounded-lg border border-teal-200 bg-white p-4">
+              <div class="flex items-center gap-2 text-neutral-900">
+                <i data-lucide="clock" class="w-4.5 h-4.5 text-lime-700"></i>
+                <span class="text-sm font-medium">Fast Turnaround</span>
+              </div>
+              <p class="text-xs text-neutral-600 mt-1">Reliable delivery</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold tracking-tight text-neutral-900 font-display">A taste of the Caribbean at
+            home</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            At Jay Dees Catering, we aim to deliver the finest food with fast turnaround times and at affordable prices.
+            Count on our first-class service that has been consistently maintained to the highest standards for the past
+            8 years.
+          </p>
+          <p class="text-neutral-700 leading-relaxed">
+            Our chefs are highly experienced and passionate about Jamaican cuisine. If you want a taste of the Caribbean
+            in the comfort of your living room, call our takeaway and watch our chefs deliver. We also undertake
+            catering services for parties and special occasions around North Kensington.
+          </p>
+          <div class="flex gap-3">
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-4 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2">
+              <i data-lucide="inbox" class="w-4 h-4"></i>
+              Get in touch
+            </a>
+            <a href="#catering"
+              class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+              <i data-lucide="party-popper" class="w-4 h-4"></i>
+              Events & Catering
             </a>
           </div>
-
-          <!-- Mobile menu button -->
-          <button id="menuButton" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-teal-900 hover:text-teal-800 hover:bg-teal-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500" aria-label="Open menu" aria-expanded="false">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
-        </div>
-
-        <!-- Mobile Nav -->
-        <div id="mobileNav" class="md:hidden hidden pb-4">
-          <div class="mt-2 grid gap-1 text-sm">
-            <a href="#menu" class="rounded-md px-3 py-2 hover:bg-teal-50">Menu</a>
-            <a href="#catering" class="rounded-md px-3 py-2 hover:bg-teal-50">Catering</a>
-            <a href="#about" class="rounded-md px-3 py-2 hover:bg-teal-50">About</a>
-            <a href="#contact" class="rounded-md px-3 py-2 hover:bg-teal-50">Contact</a>
-            <div class="mt-2 grid grid-cols-2 gap-2">
-              <a href="tel:+442071234567" class="inline-flex items-center justify-center gap-2 rounded-md border border-teal-200 bg-white px-3 py-2 hover:bg-teal-50">
-                <i data-lucide="phone" class="w-4 h-4"></i> Call
-              </a>
-              <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-md bg-teal-600 text-white px-3 py-2 hover:bg-teal-700">
-                <i data-lucide="calendar" class="w-4 h-4"></i> Catering
-              </a>
-            </div>
-          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Hero (tropical gradient + badge tones) -->
-    <section class="relative overflow-hidden tropical-gradient palm-top palm-bottom">
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-        <div class="grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
-          <div class="space-y-6">
-            <div class="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-[12px] text-teal-800 shadow-sm">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-700"></i>
-              North Kensington · Notting Hill Gate Delivery
-            </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 font-display">
-              A taste of the Caribbean in the comfort of your home
-            </h1>
-            <p class="text-base sm:text-lg leading-relaxed text-neutral-700">
-              For over 20 years, Jay Dees Catering has served authentic Caribbean flavors with fast turnaround and fair pricing. From birthdays to family gatherings, our chefs craft vibrant Jamaican dishes and deliver right to your door.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="#menu" class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-5 py-3 text-sm font-medium hover:bg-teal-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-                <i data-lucide="utensils" class="w-5 h-5"></i>
-                View Menu
-              </a>
-              <a href="#contact" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-5 py-3 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-                <i data-lucide="chef-hat" class="w-5 h-5"></i>
-                Book Catering
-              </a>
-              <a href="tel:+442071234567" class="inline-flex items-center gap-2 rounded-md border border-lime-200 bg-lime-50 text-teal-900 px-5 py-3 text-sm hover:bg-lime-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-                <i data-lucide="phone" class="w-5 h-5"></i>
-                Call to Order
-              </a>
-            </div>
-            <div class="flex items-center gap-6 pt-2">
-              <div class="flex -space-x-2">
-                <img src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=200&auto=format&fit=crop" alt="Customer 1" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Customer 2" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
-                <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=200&auto=format&fit=crop" alt="Customer 3" class="w-8 h-8 rounded-full ring-2 ring-white object-cover" />
-              </div>
-              <p class="text-sm text-neutral-600">
-                Trusted locally for 8+ years of first-class service
-              </p>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="rounded-xl border border-teal-200 bg-white shadow-sm overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop" alt="Caribbean feast" class="w-full h-72 sm:h-96 object-cover" />
-              <div class="grid grid-cols-3 gap-2 p-2 bg-white">
-                <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Jerk chicken" class="h-24 w-full object-cover rounded-md" />
-                <img src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Curry goat" class="h-24 w-full object-cover rounded-md" />
-                <img src="https://images.unsplash.com/photo-1635151227785-429f420c6b9d?w=1080&q=80" alt="Plantain" class="h-24 w-full object-cover rounded-md" />
-              </div>
-            </div>
-            <div class="absolute -bottom-6 -left-6 bg-white border border-teal-200 rounded-xl shadow-sm px-4 py-3 hidden sm:flex items-center gap-3">
-              <i data-lucide="bike" class="w-5 h-5 text-teal-700"></i>
-              <div>
-                <p class="text-sm font-medium text-neutral-900">Fast Delivery</p>
-                <p class="text-xs text-neutral-600">Notting Hill Gate area</p>
-              </div>
-            </div>
-          </div>
+  <!-- Services (tones + icons) -->
+  <section id="catering" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Catering &
+            Takeaway</h2>
+          <p class="mt-2 text-neutral-600">From intimate gatherings to large celebrations, we’ve got you covered.</p>
         </div>
+        <a href="#contact"
+          class="hidden sm:inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700">
+          <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+          Get a quote
+        </a>
       </div>
-    </section>
-
-    <!-- About (colors updated + display headings) -->
-    <section id="about" class="py-16 sm:py-20 border-t border-teal-200/60 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          <div class="space-y-4">
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Jay Dees Catering in North Kensington</h2>
-            <p class="text-neutral-700 leading-relaxed">
-              We specialise in Caribbean food and have been in the catering business for over 20 years. We offer our cuisine and catering services for any special occasion, be it a birthday, anniversary, family gathering or anything in between.
-            </p>
-            <p class="text-neutral-700 leading-relaxed">
-              Our takeaway based in Notting Hill Gate delivers a wide variety of authentic Caribbean and English food. Contact us now for more information.
-            </p>
-            <div class="grid sm:grid-cols-3 gap-4 pt-2">
-              <div class="rounded-lg border border-teal-200 bg-white p-4">
-                <div class="flex items-center gap-2 text-neutral-900">
-                  <i data-lucide="award" class="w-4.5 h-4.5 text-teal-700"></i>
-                  <span class="text-sm font-medium">20+ Years</span>
-                </div>
-                <p class="text-xs text-neutral-600 mt-1">Catering excellence</p>
-              </div>
-              <div class="rounded-lg border border-teal-200 bg-white p-4">
-                <div class="flex items-center gap-2 text-neutral-900">
-                  <i data-lucide="flame" class="w-4.5 h-4.5 text-orange-600"></i>
-                  <span class="text-sm font-medium">Authentic</span>
-                </div>
-                <p class="text-xs text-neutral-600 mt-1">Jamaican flavours</p>
-              </div>
-              <div class="rounded-lg border border-teal-200 bg-white p-4">
-                <div class="flex items-center gap-2 text-neutral-900">
-                  <i data-lucide="clock" class="w-4.5 h-4.5 text-lime-700"></i>
-                  <span class="text-sm font-medium">Fast Turnaround</span>
-                </div>
-                <p class="text-xs text-neutral-600 mt-1">Reliable delivery</p>
-              </div>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <h3 class="text-2xl font-semibold tracking-tight text-neutral-900 font-display">A taste of the Caribbean at home</h3>
-            <p class="text-neutral-700 leading-relaxed">
-              At Jay Dees Catering, we aim to deliver the finest food with fast turnaround times and at affordable prices. Count on our first-class service that has been consistently maintained to the highest standards for the past 8 years.
-            </p>
-            <p class="text-neutral-700 leading-relaxed">
-              Our chefs are highly experienced and passionate about Jamaican cuisine. If you want a taste of the Caribbean in the comfort of your living room, call our takeaway and watch our chefs deliver. We also undertake catering services for parties and special occasions around North Kensington.
-            </p>
-            <div class="flex gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-4 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2">
-                <i data-lucide="inbox" class="w-4 h-4"></i>
-                Get in touch
-              </a>
-              <a href="#catering" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-                <i data-lucide="party-popper" class="w-4 h-4"></i>
-                Events & Catering
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services (tones + icons) -->
-    <section id="catering" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-4 mb-10">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Catering & Takeaway</h2>
-            <p class="mt-2 text-neutral-600">From intimate gatherings to large celebrations, we’ve got you covered.</p>
-          </div>
-          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700">
-            <i data-lucide="clipboard-check" class="w-4 h-4"></i>
-            Get a quote
-          </a>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-                <i data-lucide="chef-hat" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Catering</h3>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">Custom menus, staffing, and on-time delivery for birthdays, anniversaries, and corporate events.</p>
-            <ul class="mt-4 space-y-2 text-sm text-neutral-700">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Hot & cold buffets</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Dietary options</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Setup & service</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-                <i data-lucide="utensils" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Takeaway</h3>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">Freshly prepared Caribbean and English classics for quick pick-up or delivery.</p>
-            <ul class="mt-4 space-y-2 text-sm text-neutral-700">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Order by phone</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Ready in minutes</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Combo deals</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-                <i data-lucide="bike" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Local Delivery</h3>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">Fast delivery around Notting Hill Gate and nearby areas.</p>
-            <ul class="mt-4 space-y-2 text-sm text-neutral-700">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Live ETA by phone</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Insulated transport</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Group orders welcome</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-8 rounded-lg border border-lime-300 bg-lime-50 px-4 py-3 text-sm text-teal-900">
-          <span class="font-medium">Tip:</span> Planning a party? Ask about our set menus for 15, 30, and 50+ guests.
-        </div>
-      </div>
-    </section>
-
-    <!-- Menu Preview (badge colors adjusted) -->
-    <section id="menu" class="py-16 sm:py-20 border-t border-teal-200/60 bg-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-4 mb-10">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Popular Dishes</h2>
-            <p class="mt-2 text-neutral-600">Authentic Jamaican favourites and comforting classics.</p>
-          </div>
-          <a href="tel:+442071234567" class="hidden sm:inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-            Order by phone
-          </a>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card -->
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop" alt="Jerk Chicken" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Jerk Chicken</h3>
-                <span class="text-sm text-neutral-700">£10.50</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Smoky, spicy, perfectly charred. Served with rice & peas.</p>
-              <div class="mt-3 inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-900 px-2.5 py-1 text-xs ring-1 ring-orange-200">
-                <i data-lucide="flame" class="w-3.5 h-3.5"></i> Medium spice
-              </div>
-            </div>
-          </div>
-
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Curry Goat" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Curry Goat</h3>
-                <span class="text-sm text-neutral-700">£12.00</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Slow-cooked in rich curry gravy. Tender and aromatic.</p>
-              <div class="mt-3 inline-flex items-center gap-1 rounded-full bg-lime-50 text-lime-900 px-2.5 py-1 text-xs ring-1 ring-lime-200">
-                <i data-lucide="leaf" class="w-3.5 h-3.5"></i> House favourite
-              </div>
-            </div>
-          </div>
-
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Ackee & Saltfish" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Ackee & Saltfish</h3>
-                <span class="text-sm text-neutral-700">£11.50</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Jamaica’s national dish with peppers, onions, and thyme.</p>
-              <div class="mt-3 inline-flex items-center gap-1 rounded-full bg-sky-50 text-sky-900 px-2.5 py-1 text-xs ring-1 ring-sky-200">
-                <i data-lucide="fish" class="w-3.5 h-3.5"></i> Classic
-              </div>
-            </div>
-          </div>
-
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1635151227785-429f420c6b9d?w=1080&q=80" alt="Oxtail Stew" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Oxtail Stew</h3>
-                <span class="text-sm text-neutral-700">£13.50</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Rich, silky gravy, slow-braised with butter beans.</p>
-            </div>
-          </div>
-
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?q=80&w=1600&auto=format&fit=crop" alt="Beef Patty" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Jamaican Patty</h3>
-                <span class="text-sm text-neutral-700">£3.50</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Flaky crust with beef, chicken, or veggie filling.</p>
-            </div>
-          </div>
-
-          <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop" alt="Fried Plantain" class="h-44 w-full object-cover" />
-            <div class="p-4">
-              <div class="flex items-center justify-between">
-                <h3 class="text-base font-medium tracking-tight text-neutral-900">Fried Plantain</h3>
-                <span class="text-sm text-neutral-700">£4.00</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600">Sweet, caramelised slices—perfect side or snack.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p class="text-sm text-neutral-600">Ask about vegetarian, vegan, and gluten-free options.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
           <div class="flex items-center gap-3">
-            <a href="tel:+442071234567" class="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-4 py-2.5 text-sm hover:bg-neutral-800">
-              <i data-lucide="phone" class="w-4 h-4"></i> Call now
-            </a>
-            <a href="https://wa.me/447712345678" target="_blank" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
-              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="py-16 sm:py-20 bg-emerald-50/40 border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">How we work</h2>
-        <p class="mt-2 text-neutral-600">Simple, reliable, and tailored to your event.</p>
-        <div class="mt-8 grid md:grid-cols-4 gap-6">
-          <div class="rounded-xl border border-teal-200 bg-white p-5">
             <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              <i data-lucide="chef-hat" class="w-5 h-5"></i>
             </div>
-            <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Discover</h3>
-            <p class="mt-1 text-sm text-neutral-600">Tell us your date, guest count, and tastes.</p>
+            <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Catering</h3>
           </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <p class="mt-3 text-sm text-neutral-700">Custom menus, staffing, and on-time delivery for birthdays,
+            anniversaries, and corporate events.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-700">
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Hot & cold buffets</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Dietary options</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Setup & service</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
+          <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-              <i data-lucide="notebook-pen" class="w-5 h-5"></i>
+              <i data-lucide="utensils" class="w-5 h-5"></i>
             </div>
-            <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Plan</h3>
-            <p class="mt-1 text-sm text-neutral-600">We craft a custom menu and schedule.</p>
+            <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Takeaway</h3>
           </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <p class="mt-3 text-sm text-neutral-700">Freshly prepared Caribbean and English classics for quick pick-up or
+            delivery.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-700">
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Order by phone</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Ready in minutes</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Combo deals</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-6 hover:shadow-sm transition-shadow">
+          <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
-              <i data-lucide="stove" class="w-5 h-5"></i>
+              <i data-lucide="bike" class="w-5 h-5"></i>
             </div>
-            <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Cook</h3>
-            <p class="mt-1 text-sm text-neutral-600">Freshly prepared with quality ingredients.</p>
+            <h3 class="text-lg font-medium text-neutral-900 tracking-tight">Local Delivery</h3>
           </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-5">
-            <div class="w-10 h-10 rounded-lg bg-lime-50 text-lime-700 grid place-items-center ring-1 ring-lime-100">
-              <i data-lucide="truck" class="w-5 h-5"></i>
+          <p class="mt-3 text-sm text-neutral-700">Fast delivery around Notting Hill Gate and nearby areas.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-700">
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Live ETA by phone</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Insulated transport</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-teal-700"></i>Group orders welcome</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 rounded-lg border border-lime-300 bg-lime-50 px-4 py-3 text-sm text-teal-900">
+        <span class="font-medium">Tip:</span> Planning a party? Ask about our set menus for 15, 30, and 50+ guests.
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Preview (badge colors adjusted) -->
+  <section id="menu" class="py-16 sm:py-20 border-t border-teal-200/60 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Popular Dishes
+          </h2>
+          <p class="mt-2 text-neutral-600">Authentic Jamaican favourites and comforting classics.</p>
+        </div>
+        <a href="tel:+442071234567"
+          class="hidden sm:inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm text-teal-900 hover:bg-teal-50 hover:border-teal-300">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          Order by phone
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop"
+            alt="Jerk Chicken" class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Jerk Chicken</h3>
+              <span class="text-sm text-neutral-700">£10.50</span>
             </div>
-            <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Deliver</h3>
-            <p class="mt-1 text-sm text-neutral-600">On time, set up, and ready to serve.</p>
+            <p class="mt-1 text-sm text-neutral-600">Smoky, spicy, perfectly charred. Served with rice & peas.</p>
+            <div
+              class="mt-3 inline-flex items-center gap-1 rounded-full bg-orange-50 text-orange-900 px-2.5 py-1 text-xs ring-1 ring-orange-200">
+              <i data-lucide="flame" class="w-3.5 h-3.5"></i> Medium spice
+            </div>
+          </div>
+        </div>
+
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Curry Goat"
+            class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Curry Goat</h3>
+              <span class="text-sm text-neutral-700">£12.00</span>
+            </div>
+            <p class="mt-1 text-sm text-neutral-600">Slow-cooked in rich curry gravy. Tender and aromatic.</p>
+            <div
+              class="mt-3 inline-flex items-center gap-1 rounded-full bg-lime-50 text-lime-900 px-2.5 py-1 text-xs ring-1 ring-lime-200">
+              <i data-lucide="leaf" class="w-3.5 h-3.5"></i> House favourite
+            </div>
+          </div>
+        </div>
+
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Ackee & Saltfish"
+            class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Ackee & Saltfish</h3>
+              <span class="text-sm text-neutral-700">£11.50</span>
+            </div>
+            <p class="mt-1 text-sm text-neutral-600">Jamaica’s national dish with peppers, onions, and thyme.</p>
+            <div
+              class="mt-3 inline-flex items-center gap-1 rounded-full bg-sky-50 text-sky-900 px-2.5 py-1 text-xs ring-1 ring-sky-200">
+              <i data-lucide="fish" class="w-3.5 h-3.5"></i> Classic
+            </div>
+          </div>
+        </div>
+
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1635151227785-429f420c6b9d?w=1080&q=80" alt="Oxtail Stew"
+            class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Oxtail Stew</h3>
+              <span class="text-sm text-neutral-700">£13.50</span>
+            </div>
+            <p class="mt-1 text-sm text-neutral-600">Rich, silky gravy, slow-braised with butter beans.</p>
+          </div>
+        </div>
+
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?q=80&w=1600&auto=format&fit=crop"
+            alt="Beef Patty" class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Jamaican Patty</h3>
+              <span class="text-sm text-neutral-700">£3.50</span>
+            </div>
+            <p class="mt-1 text-sm text-neutral-600">Flaky crust with beef, chicken, or veggie filling.</p>
+          </div>
+        </div>
+
+        <div class="group rounded-xl border border-teal-200 bg-white overflow-hidden hover:shadow-sm transition-shadow">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop"
+            alt="Fried Plantain" class="h-44 w-full object-cover" />
+          <div class="p-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-medium tracking-tight text-neutral-900">Fried Plantain</h3>
+              <span class="text-sm text-neutral-700">£4.00</span>
+            </div>
+            <p class="mt-1 text-sm text-neutral-600">Sweet, caramelised slices—perfect side or snack.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section class="py-16 sm:py-20 bg-white border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-4 mb-10">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Loved by our community</h2>
-            <p class="mt-2 text-neutral-600">What our customers say.</p>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="rounded-xl border border-teal-200 bg-white p-6">
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?q=80&w=200&auto=format&fit=crop" alt="Reviewer" class="w-10 h-10 rounded-full object-cover" />
-              <div>
-                <p class="text-sm font-medium text-neutral-900">Amara B.</p>
-                <p class="text-xs text-neutral-600">Birthday catering</p>
-              </div>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">“The jerk chicken and plantain were a hit! Setup was seamless and on time.”</p>
-          </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-6">
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop" alt="Reviewer" class="w-10 h-10 rounded-full object-cover" />
-              <div>
-                <p class="text-sm font-medium text-neutral-900">Daniel R.</p>
-                <p class="text-xs text-neutral-600">Takeaway regular</p>
-              </div>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">“Great value and always hot. Curry goat is incredible.”</p>
-          </div>
-          <div class="rounded-xl border border-teal-200 bg-white p-6">
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Reviewer" class="w-10 h-10 rounded-full object-cover" />
-              <div>
-                <p class="text-sm font-medium text-neutral-900">Sophie L.</p>
-                <p class="text-xs text-neutral-600">Office lunch</p>
-              </div>
-            </div>
-            <p class="mt-3 text-sm text-neutral-700">“Reliable delivery and generous portions. Highly recommend!”</p>
-          </div>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-neutral-600">Ask about vegetarian, vegan, and gluten-free options.</p>
+        <div class="flex items-center gap-3">
+          <a href="tel:+442071234567"
+            class="inline-flex items-center gap-2 rounded-md bg-neutral-900 text-white px-4 py-2.5 text-sm hover:bg-neutral-800">
+            <i data-lucide="phone" class="w-4 h-4"></i> Call now
+          </a>
+          <a href="https://wa.me/447712345678" target="_blank"
+            class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Gallery -->
-    <section class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between gap-4 mb-8">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Gallery</h2>
-            <p class="mt-2 text-neutral-600">A peek at our dishes and events.</p>
+  <!-- Process -->
+  <section class="py-16 sm:py-20 bg-emerald-50/40 border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">How we work</h2>
+      <p class="mt-2 text-neutral-600">Simple, reliable, and tailored to your event.</p>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
           </div>
+          <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Discover</h3>
+          <p class="mt-1 text-sm text-neutral-600">Tell us your date, guest count, and tastes.</p>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <img class="rounded-lg border border-teal-200 object-cover w-full h-48" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop" alt="Spread 1" />
-          <img class="rounded-lg border border-teal-200 object-cover w-full h-48" src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Spread 2" />
-          <img class="rounded-lg border border-teal-200 object-cover w-full h-48" src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop" alt="Event buffet" />
-          <img class="rounded-lg border border-teal-200 object-cover w-full h-48" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" alt="Seasonings" />
+        <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
+            <i data-lucide="notebook-pen" class="w-5 h-5"></i>
+          </div>
+          <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Plan</h3>
+          <p class="mt-1 text-sm text-neutral-600">We craft a custom menu and schedule.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Location -->
-    <section class="py-16 sm:py-20 bg-white border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-8">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Serving North Kensington & nearby</h2>
-            <p class="mt-3 text-neutral-700">Pick-up in Notting Hill Gate with local delivery available. Call for delivery zones and times.</p>
-            <ul class="mt-4 space-y-2 text-sm text-neutral-700">
-              <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> North Kensington</li>
-              <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> Notting Hill Gate</li>
-              <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> Ladbroke Grove · Holland Park</li>
-            </ul>
-            <div class="mt-5 flex gap-3">
-              <a href="tel:+442071234567" class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700">
-                <i data-lucide="phone" class="w-4 h-4"></i> Call for delivery
-              </a>
-              <a href="https://maps.google.com/?q=Notting+Hill+Gate+London" target="_blank" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
-                <i data-lucide="navigation" class="w-4 h-4"></i> Open in Maps
-              </a>
-            </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <div class="w-10 h-10 rounded-lg bg-teal-50 text-teal-700 grid place-items-center ring-1 ring-teal-100">
+            <i data-lucide="stove" class="w-5 h-5"></i>
           </div>
-          <div class="rounded-xl overflow-hidden border border-teal-200">
-            <iframe title="Map of Notting Hill Gate" class="w-full h-80" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Notting+Hill+Gate+London&output=embed"></iframe>
+          <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Cook</h3>
+          <p class="mt-1 text-sm text-neutral-600">Freshly prepared with quality ingredients.</p>
+        </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-5">
+          <div class="w-10 h-10 rounded-lg bg-lime-50 text-lime-700 grid place-items-center ring-1 ring-lime-100">
+            <i data-lucide="truck" class="w-5 h-5"></i>
           </div>
+          <h3 class="mt-4 text-base font-medium tracking-tight text-neutral-900">Deliver</h3>
+          <p class="mt-1 text-sm text-neutral-600">On time, set up, and ready to serve.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Contact us</h2>
-            <p class="mt-2 text-neutral-700">We usually reply within 1 hour during opening times.</p>
-            <div class="mt-6 space-y-4">
-              <a href="tel:+442071234567" class="flex items-center gap-3 text-neutral-800 hover:text-neutral-900">
-                <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
-                  <i data-lucide="phone" class="w-5 h-5 text-teal-700"></i>
-                </div>
-                <div>
-                  <p class="text-sm font-medium">+44 20 7123 4567</p>
-                  <p class="text-xs text-neutral-600">Call to order or discuss catering</p>
-                </div>
-              </a>
-              <a href="mailto:hello@jaydeescatering.co.uk" class="flex items-center gap-3 text-neutral-800 hover:text-neutral-900">
-                <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
-                  <i data-lucide="mail" class="w-5 h-5 text-teal-700"></i>
-                </div>
-                <div>
-                  <p class="text-sm font-medium">hello@jaydeescatering.co.uk</p>
-                  <p class="text-xs text-neutral-600">Send your event details</p>
-                </div>
-              </a>
-              <div class="flex items-center gap-3 text-neutral-800">
-                <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
-                  <i data-lucide="clock-8" class="w-5 h-5 text-teal-700"></i>
-                </div>
-                <div>
-                  <p class="text-sm font-medium">Open daily 11:00–22:00</p>
-                  <p class="text-xs text-neutral-600">Weekend hours may extend for events</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-teal-200 bg-white p-6 shadow-sm">
-            <form action="#" method="post" class="grid gap-4">
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="name" class="block text-sm font-medium text-neutral-800">Name</label>
-                  <input id="name" name="name" type="text" required placeholder="Your full name" class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
-                </div>
-                <div>
-                  <label for="phone" class="block text-sm font-medium text-neutral-800">Phone</label>
-                  <input id="phone" name="phone" type="tel" placeholder="+44" class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
-                </div>
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium text-neutral-800">Email</label>
-                <input id="email" name="email" type="email" required placeholder="you@example.com" class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
-              </div>
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="date" class="block text-sm font-medium text-neutral-800">Event date</label>
-                  <input id="date" name="date" type="date" class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
-                </div>
-                <div>
-                  <label for="guests" class="block text-sm font-medium text-neutral-800">Guests</label>
-                  <input id="guests" name="guests" type="number" min="1" placeholder="e.g. 40" class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
-                </div>
-              </div>
-              <div>
-                <label for="message" class="block text-sm font-medium text-neutral-800">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about your event, menu preferences, dietary needs..." class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"></textarea>
-              </div>
-              <div class="flex items-start gap-3 text-xs text-neutral-600">
-                <i data-lucide="shield-check" class="w-4 h-4 text-teal-700 mt-0.5"></i>
-                We’ll only use your details to respond to your enquiry.
-              </div>
-              <div class="flex items-center gap-3">
-                <button type="submit" class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                  Send enquiry
-                </button>
-                <a href="mailto:hello@jaydeescatering.co.uk" class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
-                  <i data-lucide="mail" class="w-4 h-4"></i>
-                  Email us instead
-                </a>
-              </div>
-            </form>
-          </div>
+  <!-- Testimonials -->
+  <section class="py-16 sm:py-20 bg-white border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Loved by our
+            community</h2>
+          <p class="mt-2 text-neutral-600">What our customers say.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-top border-teal-200/60 bg-white border-t">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <div class="grid md:grid-cols-4 gap-8">
-          <div class="md:col-span-2">
-            <div class="inline-flex items-center gap-3">
-              <div class="w-9 h-9 rounded-md bg-teal-800 text-white grid place-items-center tracking-tight text-sm font-semibold ring-1 ring-black/5 shadow-sm">JD</div>
-              <span class="text-neutral-900 font-medium tracking-tight font-display">Jay Dees Catering</span>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-xl border border-teal-200 bg-white p-6">
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?q=80&w=200&auto=format&fit=crop"
+              alt="Reviewer" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-sm font-medium text-neutral-900">Amara B.</p>
+              <p class="text-xs text-neutral-600">Birthday catering</p>
             </div>
-            <p class="mt-3 text-sm text-neutral-700 max-w-lg">
-              Authentic Caribbean catering and takeaway based in North Kensington. Fresh, fast, and full of flavour.
-            </p>
           </div>
-          <div>
-            <h4 class="text-sm font-medium text-neutral-900 tracking-tight">Visit</h4>
-            <p class="mt-2 text-sm text-neutral-700">Notting Hill Gate, London</p>
-            <a href="https://maps.google.com/?q=Notting+Hill+Gate+London" target="_blank" class="mt-1 inline-flex items-center gap-1.5 text-sm text-teal-900 hover:text-teal-800">
-              <i data-lucide="map" class="w-4 h-4"></i> Directions
+          <p class="mt-3 text-sm text-neutral-700">“The jerk chicken and plantain were a hit! Setup was seamless and on
+            time.”</p>
+        </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-6">
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop"
+              alt="Reviewer" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-sm font-medium text-neutral-900">Daniel R.</p>
+              <p class="text-xs text-neutral-600">Takeaway regular</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-neutral-700">“Great value and always hot. Curry goat is incredible.”</p>
+        </div>
+        <div class="rounded-xl border border-teal-200 bg-white p-6">
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&q=80" alt="Reviewer"
+              class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-sm font-medium text-neutral-900">Sophie L.</p>
+              <p class="text-xs text-neutral-600">Office lunch</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-neutral-700">“Reliable delivery and generous portions. Highly recommend!”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Gallery</h2>
+          <p class="mt-2 text-neutral-600">A peek at our dishes and events.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
+          src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop"
+          alt="Spread 1" />
+        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
+          src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=1080&q=80" alt="Spread 2" />
+        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
+          src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=1200&auto=format&fit=crop"
+          alt="Event buffet" />
+        <img class="rounded-lg border border-teal-200 object-cover w-full h-48"
+          src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
+          alt="Seasonings" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="py-16 sm:py-20 bg-white border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Serving North
+            Kensington & nearby</h2>
+          <p class="mt-3 text-neutral-700">Pick-up in Notting Hill Gate with local delivery available. Call for delivery
+            zones and times.</p>
+          <ul class="mt-4 space-y-2 text-sm text-neutral-700">
+            <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> North Kensington</li>
+            <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> Notting Hill Gate</li>
+            <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-700"></i> Ladbroke Grove · Holland
+              Park</li>
+          </ul>
+          <div class="mt-5 flex gap-3">
+            <a href="tel:+442071234567"
+              class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700">
+              <i data-lucide="phone" class="w-4 h-4"></i> Call for delivery
+            </a>
+            <a href="https://maps.google.com/?q=Notting+Hill+Gate+London" target="_blank"
+              class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
+              <i data-lucide="navigation" class="w-4 h-4"></i> Open in Maps
             </a>
           </div>
-          <div>
-            <h4 class="text-sm font-medium text-neutral-900 tracking-tight">Contact</h4>
-            <ul class="mt-2 space-y-1 text-sm">
-              <li><a href="tel:+442071234567" class="inline-flex items-center gap-1.5 text-teal-900 hover:text-teal-800"><i data-lucide="phone" class="w-4 h-4"></i> +44 20 7123 4567</a></li>
-              <li><a href="mailto:hello@jaydeescatering.co.uk" class="inline-flex items-center gap-1.5 text-teal-900 hover:text-teal-800"><i data-lucide="mail" class="w-4 h-4"></i> hello@jaydeescatering.co.uk</a></li>
-              <li class="inline-flex items-center gap-1.5 text-neutral-800"><i data-lucide="clock-8" class="w-4 h-4"></i> Daily 11:00–22:00</li>
-            </ul>
-          </div>
         </div>
-        <div class="mt-8 pt-6 border-t border-teal-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
-          <p>© <span id="year"></span> Jay Dees Catering. All rights reserved.</p>
-          <div class="flex items-center gap-4">
-            <a href="#" class="inline-flex items-center gap-1.5 hover:text-teal-900"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</a>
-            <a href="#" class="inline-flex items-center gap-1.5 hover:text-teal-900"><i data-lucide="facebook" class="w-4 h-4"></i> Facebook</a>
-          </div>
+        <div class="rounded-xl overflow-hidden border border-teal-200">
+          <iframe title="Map of Notting Hill Gate" class="w-full h-80" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Notting+Hill+Gate+London&output=embed"></iframe>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script>
-      // Initialize icons
-      lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-20 bg-emerald-50/30 border-t border-teal-200/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 font-display">Contact us</h2>
+          <p class="mt-2 text-neutral-700">We usually reply within 1 hour during opening times.</p>
+          <div class="mt-6 space-y-4">
+            <a href="tel:+442071234567" class="flex items-center gap-3 text-neutral-800 hover:text-neutral-900">
+              <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
+                <i data-lucide="phone" class="w-5 h-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="text-sm font-medium">+44 20 7123 4567</p>
+                <p class="text-xs text-neutral-600">Call to order or discuss catering</p>
+              </div>
+            </a>
+            <a href="mailto:hello@jaydeescatering.co.uk"
+              class="flex items-center gap-3 text-neutral-800 hover:text-neutral-900">
+              <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
+                <i data-lucide="mail" class="w-5 h-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="text-sm font-medium">hello@jaydeescatering.co.uk</p>
+                <p class="text-xs text-neutral-600">Send your event details</p>
+              </div>
+            </a>
+            <div class="flex items-center gap-3 text-neutral-800">
+              <div class="w-9 h-9 rounded-lg bg-white grid place-items-center border border-teal-200">
+                <i data-lucide="clock-8" class="w-5 h-5 text-teal-700"></i>
+              </div>
+              <div>
+                <p class="text-sm font-medium">Open daily 11:00–22:00</p>
+                <p class="text-xs text-neutral-600">Weekend hours may extend for events</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      // Mobile menu toggle
-      const menuButton = document.getElementById('menuButton');
-      const mobileNav = document.getElementById('mobileNav');
-      if (menuButton && mobileNav) {
-        menuButton.addEventListener('click', () => {
-          const isHidden = mobileNav.classList.contains('hidden');
-          mobileNav.classList.toggle('hidden');
-          menuButton.setAttribute('aria-expanded', String(isHidden));
-          const icon = menuButton.querySelector('svg');
-          if (icon) {
-            icon.replaceWith(lucide.icons[isHidden ? 'x' : 'menu'].createSVG({ width: 24, height: 24, 'stroke-width': 1.5 }));
-          }
-        });
-      }
+        <div class="rounded-xl border border-teal-200 bg-white p-6 shadow-sm">
+          <form action="#" method="post" class="grid gap-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-neutral-800">Name</label>
+                <input id="name" name="name" type="text" required placeholder="Your full name"
+                  class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-neutral-800">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+44"
+                  class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-neutral-800">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com"
+                class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="date" class="block text-sm font-medium text-neutral-800">Event date</label>
+                <input id="date" name="date" type="date"
+                  class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
+              </div>
+              <div>
+                <label for="guests" class="block text-sm font-medium text-neutral-800">Guests</label>
+                <input id="guests" name="guests" type="number" min="1" placeholder="e.g. 40"
+                  class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500" />
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-neutral-800">Message</label>
+              <textarea id="message" name="message" rows="4"
+                placeholder="Tell us about your event, menu preferences, dietary needs..."
+                class="mt-1 w-full rounded-md border border-teal-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"></textarea>
+            </div>
+            <div class="flex items-start gap-3 text-xs text-neutral-600">
+              <i data-lucide="shield-check" class="w-4 h-4 text-teal-700 mt-0.5"></i>
+              We’ll only use your details to respond to your enquiry.
+            </div>
+            <div class="flex items-center gap-3">
+              <button type="submit"
+                class="inline-flex items-center gap-2 rounded-md bg-teal-600 text-white px-4 py-2.5 text-sm hover:bg-teal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Send enquiry
+              </button>
+              <a href="mailto:hello@jaydeescatering.co.uk"
+                class="inline-flex items-center gap-2 rounded-md border border-teal-200 bg-white px-4 py-2.5 text-sm hover:bg-teal-50">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                Email us instead
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Current year
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <!-- Footer -->
+  <footer class="border-top border-teal-200/60 bg-white border-t">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="inline-flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-md bg-teal-800 text-white grid place-items-center tracking-tight text-sm font-semibold ring-1 ring-black/5 shadow-sm">
+              JD</div>
+            <span class="text-neutral-900 font-medium tracking-tight font-display">Jay Dees Catering</span>
+          </div>
+          <p class="mt-3 text-sm text-neutral-700 max-w-lg">
+            Authentic Caribbean catering and takeaway based in North Kensington. Fresh, fast, and full of flavour.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-medium text-neutral-900 tracking-tight">Visit</h4>
+          <p class="mt-2 text-sm text-neutral-700">Notting Hill Gate, London</p>
+          <a href="https://maps.google.com/?q=Notting+Hill+Gate+London" target="_blank"
+            class="mt-1 inline-flex items-center gap-1.5 text-sm text-teal-900 hover:text-teal-800">
+            <i data-lucide="map" class="w-4 h-4"></i> Directions
+          </a>
+        </div>
+        <div>
+          <h4 class="text-sm font-medium text-neutral-900 tracking-tight">Contact</h4>
+          <ul class="mt-2 space-y-1 text-sm">
+            <li><a href="tel:+442071234567"
+                class="inline-flex items-center gap-1.5 text-teal-900 hover:text-teal-800"><i data-lucide="phone"
+                  class="w-4 h-4"></i> +44 20 7123 4567</a></li>
+            <li><a href="mailto:hello@jaydeescatering.co.uk"
+                class="inline-flex items-center gap-1.5 text-teal-900 hover:text-teal-800"><i data-lucide="mail"
+                  class="w-4 h-4"></i> hello@jaydeescatering.co.uk</a></li>
+            <li class="inline-flex items-center gap-1.5 text-neutral-800"><i data-lucide="clock-8" class="w-4 h-4"></i>
+              Daily 11:00–22:00</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-8 pt-6 border-t border-teal-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
+        <p>© <span id="year"></span> Jay Dees Catering. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="inline-flex items-center gap-1.5 hover:text-teal-900"><i data-lucide="instagram"
+              class="w-4 h-4"></i> Instagram</a>
+          <a href="#" class="inline-flex items-center gap-1.5 hover:text-teal-900"><i data-lucide="facebook"
+              class="w-4 h-4"></i> Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // Mobile menu toggle
+    const menuButton = document.getElementById('menuButton');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuButton && mobileNav) {
+      menuButton.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.contains('hidden');
+        mobileNav.classList.toggle('hidden');
+        menuButton.setAttribute('aria-expanded', String(isHidden));
+        const icon = menuButton.querySelector('svg');
+        if (icon) {
+          icon.replaceWith(lucide.icons[isHidden ? 'x' : 'menu'].createSVG({ width: 24, height: 24, 'stroke-width': 1.5 }));
+        }
+      });
+    }
+
+    // Current year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
-
